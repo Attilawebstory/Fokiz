@@ -50,9 +50,9 @@ checkToken(); // Check Authentication Token
 
     if(!empty($_GET['save'])){
         $system = new System();
-        $system->title = scrub($_POST['title']);
-        $system->keywords = scrub($_POST['keywords']);
-        $system->description = scrub($_POST['description']);
+        $system->title = $_POST['title'];
+        $system->keywords = $_POST['keywords'];
+        $system->description = $_POST['description'];
         $system->default_page = $_POST['default_page'];
         $system->Save();
     }
